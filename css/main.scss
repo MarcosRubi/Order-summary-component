@@ -1,0 +1,209 @@
+$Pale-blue: hsl(225, 100%, 94%);
+$Bright-blue: hsl(245, 75%, 52%);
+$Very-pale-blue: hsl(225, 100%, 98%);
+$Desaturated-blue: hsl(224, 23%, 55%);
+$Dark-blue: hsl(223, 47%, 23%);
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: $Pale-blue;
+    background-image: url(../images/pattern-background-mobile.svg);
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: $Dark-blue;
+    opacity: 0;
+    &.visible{
+        animation: visible 1s linear;
+        opacity: 1;
+    }
+}
+
+.main-container {
+    width: 95%;
+    margin: 0px auto;
+    max-width: 1440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.jc-around {
+    justify-content: space-around;
+}
+
+.my-1 {
+    margin: 10px 0px;
+}
+
+.my-3 {
+    margin: 30px 0px;
+}
+
+.ml-1 {
+    margin-left: 10px;
+}
+
+.btn {
+    display: block;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: 900;
+    border-radius: 10px;
+    transition: all 500ms;
+}
+
+.btn-primary {
+    background-color: $Bright-blue;
+    color: White;
+    box-shadow: $Bright-blue 0px 18px 50px -20px;
+    opacity: 0;
+    &.visible{
+        animation: visible 2.25s linear;
+        opacity: 1;
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.btn-secondary {
+    color: $Desaturated-blue;
+    opacity: 0;
+    &.visible{
+        animation: visible 2.5s linear;
+        opacity: 1;
+    }
+
+    &:hover {
+        font-weight: 900;
+        color: $Dark-blue;
+    }
+}
+
+@keyframes visible {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.card {
+    background-color: $Very-pale-blue;
+    max-width: 375px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    opacity: 0;
+    &.visible{
+        animation: visible .3s linear;
+        opacity: 1;
+    }
+
+    &__img img {
+        width: 100%;
+        display: flex;
+        opacity: 0;
+        &.visible{
+            animation: visible .75s linear;
+            opacity: 1;
+        }
+    }
+    
+    &__content {
+        padding: 20px;
+        text-align: center;
+
+        &--description {
+            color: $Desaturated-blue;
+            line-height: 1.5;
+            margin: 30px 0px;
+            opacity: 0;
+            &.visible{
+                animation: visible 1.25s linear;
+                opacity: 1;
+            }
+        }
+        &--icon{
+            opacity: 0;
+            &.visible{
+                animation: visible 1.5s linear;
+                opacity: 1;
+            }
+        }
+        &--plan {
+            p {
+                font-weight: 900;
+            }
+
+            span {
+                color: $Desaturated-blue;
+                font-weight: 500;
+            }
+            opacity: 0;
+            &.visible{
+                animation: visible 1.75s linear;
+                opacity: 1;
+            }
+        }
+
+        &--link {
+            font-weight: 700;
+            opacity: 0;
+            &.visible{
+                animation: visible 2s linear;
+                opacity: 1;
+            }
+
+            a {
+                transition: all 300ms;
+
+                &:hover {
+                    text-decoration: none;
+                    opacity: 0.5;
+                }
+            }
+
+        }
+    }
+}
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width:768px) {
+    body {
+        background-image: url(../images/pattern-background-desktop.svg);
+    }
+}

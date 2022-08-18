@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  background-color: #e0e8ff;
+  background-image: url(../images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: #1f2f56;
+  opacity: 0;
+}
+h1.visible {
+  -webkit-animation: visible 1s linear;
+  animation: visible 1s linear;
+  opacity: 1;
+}
+
+.main-container {
+  width: 95%;
+  margin: 0px auto;
+  max-width: 1440px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.align-center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.jc-around {
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.my-1 {
+  margin: 10px 0px;
+}
+
+.my-3 {
+  margin: 30px 0px;
+}
+
+.ml-1 {
+  margin-left: 10px;
+}
+
+.btn {
+  display: block;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: 900;
+  border-radius: 10px;
+  -webkit-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms;
+}
+
+.btn-primary {
+  background-color: #3829e0;
+  color: White;
+  -webkit-box-shadow: #3829e0 0px 18px 50px -20px;
+  box-shadow: #3829e0 0px 18px 50px -20px;
+  opacity: 0;
+}
+.btn-primary.visible {
+  -webkit-animation: visible 2.25s linear;
+  animation: visible 2.25s linear;
+  opacity: 1;
+}
+.btn-primary:hover {
+  opacity: 0.8;
+}
+
+.btn-secondary {
+  color: #7280a7;
+  opacity: 0;
+}
+.btn-secondary.visible {
+  -webkit-animation: visible 2.5s linear;
+  animation: visible 2.5s linear;
+  opacity: 1;
+}
+.btn-secondary:hover {
+  font-weight: 900;
+  color: #1f2f56;
+}
+
+@-webkit-keyframes visible {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes visible {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.card {
+  background-color: #f5f7ff;
+  max-width: 400px;
+  border-radius: 20px;
+  overflow: hidden;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  opacity: 0;
+}
+.card.visible {
+  -webkit-animation: visible 0.3s linear;
+  animation: visible 0.3s linear;
+  opacity: 1;
+}
+.card__img img {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 0;
+}
+.card__img img.visible {
+  -webkit-animation: visible 0.75s linear;
+  animation: visible 0.75s linear;
+  opacity: 1;
+}
+.card__content {
+  padding: 20px;
+  text-align: center;
+}
+.card__content--description {
+  color: #7280a7;
+  line-height: 1.5;
+  margin: 30px 0px;
+  opacity: 0;
+}
+.card__content--description.visible {
+  -webkit-animation: visible 1.25s linear;
+  animation: visible 1.25s linear;
+  opacity: 1;
+}
+.card__content--icon {
+  opacity: 0;
+}
+.card__content--icon.visible {
+  -webkit-animation: visible 1.5s linear;
+  animation: visible 1.5s linear;
+  opacity: 1;
+}
+.card__content--plan {
+  opacity: 0;
+}
+.card__content--plan p {
+  font-weight: 900;
+}
+.card__content--plan span {
+  color: #7280a7;
+  font-weight: 500;
+}
+.card__content--plan.visible {
+  -webkit-animation: visible 1.75s linear;
+  animation: visible 1.75s linear;
+  opacity: 1;
+}
+.card__content--link {
+  font-weight: 700;
+  opacity: 0;
+}
+.card__content--link.visible {
+  -webkit-animation: visible 2s linear;
+  animation: visible 2s linear;
+  opacity: 1;
+}
+.card__content--link a {
+  -webkit-transition: all 300ms;
+  -o-transition: all 300ms;
+  transition: all 300ms;
+}
+.card__content--link a:hover {
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+@media (min-width: 768px) {
+  body {
+    background-image: url(../images/pattern-background-desktop.svg);
+  }
+}
